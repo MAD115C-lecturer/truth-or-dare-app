@@ -1,0 +1,103 @@
+body {
+    background-color: white;
+    margin: 0;
+    overflow: hidden;
+}
+
+#taskArea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% auto auto;
+    width: 90%;
+    height: 50vh;
+    padding: 10px;
+    border-radius: 5vh;
+    -webkit-border-radius: 5vh;
+    -moz-border-radius: 5vh;
+    background: white;
+    color: black;
+    font-size: 4vh;
+    border: 2px solid #af7ac5; /* Purple border */
+}
+
+#navigation {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: space-between; /* Align buttons to ends */
+    align-items: center;
+    box-sizing: border-box;
+}
+
+button {
+    border-radius: 5vh;
+    -webkit-border-radius: 5vh;
+    -moz-border-radius: 5vh;
+    background-color: #af7ac5; /* Purple background for Truth/Dare button */
+    color: white;
+    width: 40%;
+    height: 20%;
+    font-size: 4vh;
+    box-shadow: 0 2vh 3vh rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color:#b268d2; /* Darker purple on hover */
+    font-size: 5vh;
+}
+
+#truth {
+    border: 0.3vh solid #af7ac5; /* Purple border for truth button */
+}
+
+#dare {
+    border: 0.3vh solid #af7ac5; /* Purple border for dare button */
+}
+
+#truth:hover,
+#dare:hover {
+    cursor: pointer;
+    border-width: 0.5vh;
+}
+
+.shadow {
+    position: relative;
+    margin: 200px auto 0;
+    border-radius: 5vh;
+    -webkit-border-radius: 5vh;
+    -moz-border-radius: 5vh;
+}
+.shadow:before,
+.shadow:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(45deg, #AF7AC5, #FF69B4, #FFA500, #FFD700, #40E0D0, #AF7AC5, #FF69B4, #FFA500, #FFD700, #40E0D0);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: animate 20s linear infinite;
+    border-radius: 5vh;
+    -webkit-border-radius: 5vh;
+    -moz-border-radius: 5vh;
+}
+.shadow:after {
+    filter: blur(20px);
+    border-radius: 5vh;
+    -webkit-border-radius: 5vh;
+    -moz-border-radius: 5vh;
+}
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 300% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
